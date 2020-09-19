@@ -1,0 +1,174 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 1rem;
+    color: #404040;
+    text-align: center;
+}
+
+/* ===============
+   Typography
+   =============*/
+
+h1 {
+    font-size: 2.25rem;
+    font-weight: 300;
+    color: white;
+    margin: 2em 0;
+}
+
+h1 + p {
+    color: #F18119;
+    font-size: 1.3125rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+strong { font-weight: 900; }
+
+.top-text {
+    font-size: 0.625rem;
+    color: #F18119;
+    font-weight: 900;
+    text-transform: uppercase;
+    order: -1; /* order works only with flex */
+    border-top: 5px solid #F18119;
+    margin: 0;
+    padding-top: 2px;
+    border-image: linear-gradient(to right, #FFA51D, #FF713B) 1; /* setting the linear gradient to the border */
+
+}
+
+h2 {
+    font-size: 1.3125rem;
+    margin: 0;
+}
+
+h2 + p {
+    color: #F18119;
+    font-weight: 900;
+    margin-top: 0;
+}
+
+.print-text {
+    font-size: 0.625rem;
+    letter-spacing: 1px;
+}
+
+/* ===============
+   Intro
+   =============*/
+
+.intro {
+    background-image: url(../images/ribs.jpg); /* you can add a linear gradient to background image also */
+    background-blend-mode: multiply; /* u can set blend mode to multiply, scree, and a lot */
+    background-size: cover;
+    background-position: center;
+    padding: 0 .5em 2em;
+    background-color: #404040;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 50vh;
+}
+
+/* ===============
+   Main Content
+   =============*/
+
+.main-content {
+    padding: 2em 1em;
+}
+
+/* solution for big screens: In big screen we dont want image to get stretched */
+.intro > *,
+.main-content > * {
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* ===============
+   Form
+   =============*/
+
+.email-collector {
+    /* border: 1px orange solid; */
+    width: 80%;
+    max-width: 300px;
+}
+
+input, 
+.btn {
+    width: 100%;
+    border-radius: 5px;
+}
+
+input {
+    font-family: inherit;
+    text-align: inherit;
+    margin-bottom: .75em;
+    padding: .25em;
+    border: 1px solid #404040;
+
+}
+
+.btn {
+    display: inline-block;
+    font-size: .625rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 1em 1.5em;
+    border: unset;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background: linear-gradient(to right, #FFA51D, #FF713B);
+    color: white;
+    transform: scale(1);
+    transition: transform 250ms; /* it means transition the color in the hover at 250ms */
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+    transform: scale(1.1);
+}
+
+/* ===============
+   Media Query
+   =============*/
+
+@media (min-width: 500px) {
+    body {
+        font-size: 1.125rem;
+        display: flex;
+    }
+
+    h1 {
+        font-size: 3.5rem;
+    }
+
+    h2,
+    h2 + p {
+        font-size: 1.75rem;
+    }
+
+    .intro,
+    .main-content {
+        width: 50%;
+        min-height: 100vh;
+    }
+
+    .main-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+}

@@ -1,0 +1,132 @@
+
+body {
+    margin: 0;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* ==================
+   Typography =====*/
+
+h1 {
+    font-size: 2.25rem;
+    text-align: center;
+    color: #fff;
+    font-weight: 300;
+    line-height: 1.2;
+}
+
+h2 {
+    font-size: 1.3125rem;
+    color: #404040;
+}
+
+.top-heading {
+    color: #F18119;
+    text-transform: uppercase;
+    margin-top: 0;
+    border-top: 7px solid;
+    order: -1;
+}
+
+.joinus-text {
+    color: #f18119;
+    font-size: 1.3125rem;
+    text-transform: uppercase;
+    font-weight: 900;
+}
+
+.sec-heading {
+    margin-bottom: 0;
+}
+
+.register-text {
+    margin: 0;
+    color: #F18119;
+    font-weight: 900;
+}
+
+.desc-text {
+    text-align: center;
+    color: #5A5A5A;
+    padding: 1em;
+    margin-top: 0;
+}
+
+.footer-text {
+    color: #989898;
+    font-size: 0.625rem;
+}
+
+/* ==================
+   Layout =====*/
+
+.container {
+    background: linear-gradient( rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45) ), url('../images/bbq.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+}
+
+.container-flex,
+.main-flex,
+.sec-flex,
+.main-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ==================
+   Form =====*/
+
+.input-text {
+    padding: 1em 4em;
+    border-radius: 0.4375em;
+    border: 1px solid #818181;
+    text-align: center;
+    margin-bottom: 1em;
+}
+
+.reg-btn {
+    padding: 1em 7em;
+    border-radius: 0.4375em;
+    border: unset;
+    background: transparent linear-gradient(270deg, #FF713B 0%, #FFA51D 100%) 0% 0% no-repeat padding-box;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+
+/* ==================
+   Media Query =====*/
+
+@media (min-width: 675px) {
+    body {
+        font-size: 1.125rem;
+    }
+
+    h1 {
+        font-size: 3.5rem;
+    }
+
+    h2 {
+        font-size: 1.75rem;
+    }
+
+    .container-flex {
+        flex-direction: row;
+    }
+
+    .main-flex {
+        justify-content: space-between;
+    }
+
+    .container {
+        width: 150%;
+        height: 100vh;
+    }
+}
